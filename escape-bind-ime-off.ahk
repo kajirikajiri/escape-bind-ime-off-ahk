@@ -3,10 +3,7 @@
 #Include ../IME.ahk
 #NoTrayIcon
 
-Esc::
-    getIMEMode := IME_GET()
-    if (getIMEMode = 1) {
-        IME_SET(0)
-    }
+$Esc::
+    IME_SET(0)
     Send {Esc}
-    return
+    Return
